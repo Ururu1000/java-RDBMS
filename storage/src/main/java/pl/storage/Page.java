@@ -4,7 +4,7 @@ public class Page {
     private int pageId = 1;
     private int pinCount = 0;
     private boolean isDirty = false;
-    private final  ByteBuffer data = ByteBuffer.allocateDirect(DiscManager.PAGE_SIZE);
+    private final  ByteBuffer data = ByteBuffer.allocateDirect(DiskManager.PAGE_SIZE);
 
     public int getPaidId(){return pageId;}
     public void setPageId(int pageId) {this.pageId = pageId; }
