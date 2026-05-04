@@ -5,11 +5,11 @@ import java.nio.channels.FileChannel;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 
-public class DiscManager implements AutoCloseable {
+public class DiskManager implements AutoCloseable {
     public static final int PAGE_SIZE = 4096;
     private final FileChannel dbFile;
 
-    public DiscManager(Path dbPath) throws IOException {
+    public DiskManager(Path dbPath) throws IOException {
         this.dbFile = FileChannel.open(dbPath,
                 StandardOpenOption.READ,
                 StandardOpenOption.WRITE,
