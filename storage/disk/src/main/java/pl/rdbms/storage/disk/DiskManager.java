@@ -1,4 +1,4 @@
-package pl.storage;
+package pl.rdbms.storage.disk;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -19,7 +19,7 @@ public class DiskManager implements AutoCloseable {
     public void writePage(int PageId, ByteBuffer buffer) throws IOException {
         long offset = PageId * PAGE_SIZE;
         buffer.rewind();
-        dbFile.read(buffer, offset);
+        dbFile.write(buffer, offset);
     }
     public void readPage(int PageId, ByteBuffer buffer) throws IOException {
         long offset = (long) PageId * PAGE_SIZE;
