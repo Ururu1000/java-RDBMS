@@ -11,4 +11,10 @@ plugins {
 }
 
 rootProject.name = "RDBMS"
-include("app", "storage", "utilities")
+include(
+    "app",
+    "storage",
+    "utilities",
+    "access",
+    "common"
+    )
